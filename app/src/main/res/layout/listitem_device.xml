@@ -46,6 +46,7 @@
         android:textSize="14sp" />
     <TextView
         android:id="@+id/device_scanrecord"
+        android:visibility="gone"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/device_ibeacon_info"
         android:layout_width="match_parent"

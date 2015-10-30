@@ -46,6 +46,7 @@
         android:textSize="14sp" />
     <TextView
         android:id="@+id/device_scanrecord"
+        android:visibility="gone"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/device_ibeacon_info"
         android:layout_width="match_parent"
@@ -53,4 +54,4 @@
         android:singleLine="false"
         android:textColor="@android:color/darker_gray"
         android:textSize="14sp" />
-</RelativeLayout><!-- From: file:/home/mark/AndroidStudioProjects/iBeaconDetector-master/app/src/main/res/layout/listitem_device.xml -->
+</RelativeLayout><!-- From: file:/home/mark/AndroidStudioProjects/iBeaconDetector-v2/app/src/main/res/layout/listitem_device.xml -->

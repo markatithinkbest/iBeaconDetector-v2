@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/home/mark/AndroidStudioProjects/iBeaconDetector-v2/app/libs/commons-io-2.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="/home/mark/AndroidStudioProjects/iBeaconDetector-v2/app/build/intermediates/pre-dexed/debug/commons-io-2.4-422f7a26adc2a8b9a25d0b248acb536e12086bd2.jar" />
+    </item>
+    <item
         jar="/home/mark/AndroidStudioProjects/iBeaconDetector-master/app/libs/commons-io-2.4.jar"
         jumboMode="false"
         revision="23.0.1"

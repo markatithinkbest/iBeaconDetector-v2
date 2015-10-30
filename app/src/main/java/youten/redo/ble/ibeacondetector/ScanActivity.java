@@ -173,7 +173,11 @@ public class ScanActivity extends Activity implements BluetoothAdapter.LeScanCal
         ListView deviceListView = (ListView) findViewById(R.id.list);
         mDeviceAdapter = new DeviceAdapter(this, R.layout.listitem_device,
                 new ArrayList<ScannedDevice>());
+
+
         deviceListView.setAdapter(mDeviceAdapter);
+
+
         stopScan();
     }
 

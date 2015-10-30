@@ -250,15 +250,17 @@ public class IBeacon {
         System.arraycopy(scanData, startByte+4, proximityUuidBytes, 0, 16); 
         String hexString = bytesToHex(proximityUuidBytes);
         StringBuilder sb = new StringBuilder();
-        sb.append(hexString.substring(0,8));
-        sb.append("-");
-        sb.append(hexString.substring(8,12));
-        sb.append("-");
-        sb.append(hexString.substring(12,16));
-        sb.append("-");
-        sb.append(hexString.substring(16,20));
-        sb.append("-");
-        sb.append(hexString.substring(20,32));
+
+        // not to show UUID
+//        sb.append(hexString.substring(0,8));
+//        sb.append("-");
+//        sb.append(hexString.substring(8,12));
+//        sb.append("-");
+//        sb.append(hexString.substring(12,16));
+//        sb.append("-");
+//        sb.append(hexString.substring(16,20));
+//        sb.append("-");
+//        sb.append(hexString.substring(20,32));
         iBeacon.proximityUuid = sb.toString();
 
         return iBeacon;
@@ -289,7 +291,8 @@ public class IBeacon {
     @SuppressLint("DefaultLocale")
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("UUID=").append(this.proximityUuid.toUpperCase());
+        //sb.append("UUID=").append(this.proximityUuid.toUpperCase());
+
         sb.append(" Major=").append(this.major);
         sb.append(" Minor=").append(this.minor);
         sb.append(" TxPower=").append(this.txPower);

@@ -30,8 +30,10 @@ public class ScannedDevice {
     private int mRssi;
     /** Display Name */
     private String mDisplayName;
+
+
     /** Advertise Scan Record */
-    private byte[] mScanRecord;
+    private byte[] mScanRecord; // ScannedDevice 已經內容了 scanRecord;
     /** parsed iBeacon Data */
     private IBeacon mIBeacon;
     /** last updated (Advertise scanned) */

@@ -16,12 +16,6 @@
 
 package youten.redo.ble.ibeacondetector;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-import youten.redo.ble.util.DateUtil;
-import youten.redo.ble.util.ScannedDevice;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.res.Resources;
@@ -30,6 +24,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+import youten.redo.ble.util.DateUtil;
+import youten.redo.ble.util.ScannedDevice;
 
 /**
  * スキャンされたBLEデバイスリストのAdapter
@@ -92,7 +93,22 @@ public class DeviceAdapter extends ArrayAdapter<ScannedDevice> {
         }
         long now = System.currentTimeMillis();
 
+        // note by Mark, 10/31/2015
+        // 如果只想顯示特定的 beacon 類型
+        // 可以只針對特定的 beacon 類型才加入 mList
         boolean contains = false;
+
+//       應該使用現有的 contains() ?
+//        mList.contains()
+//        If object != null
+//        then object.equals(e) is called
+//        for each element e returned by the iterator until the element is found
+//        傳統的做法是要在 ScannedDevice override equals
+//        以這例子而言是以MAC來判別
+
+
+
+
         for (ScannedDevice device : mList) {
             if (newDevice.getAddress().equals(device.getDevice().getAddress())) {
                 contains = true;
